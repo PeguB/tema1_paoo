@@ -8,9 +8,10 @@ class Bank {
         Bank();
         Bank(std::string name, int numberOfEmployees);
         Bank(const Bank& bank);
+        Bank& operator=(Bank x);
 
-        void setName(std::string name);
-        std::string getName();
+        void setNumberOfEmployees(int numberOfEmployees);
+        int getNumberOfEmployees();
 
         void printDetails();
         ~Bank();

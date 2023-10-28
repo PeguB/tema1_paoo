@@ -9,6 +9,16 @@ Bank::Bank(const Bank& bank){
     this->numberOfEmployees = bank.numberOfEmployees;
     std::cout<<"Copy contructor called to copy"<<bank.name<<std::endl;
 }
+
+Bank& Bank::operator=(Bank x){
+    using std::swap;
+    if(this == &x){
+        return *this;
+    }
+    swap(this->name, x.name);
+    swap(this->numberOfEmployees, x.numberOfEmployees);
+    return *this;
+}
 Bank::Bank(std::string name, int numberOfEmployees){
     this->name = name;
     this->numberOfEmployees = numberOfEmployees;
@@ -20,9 +30,9 @@ void Bank::printDetails(){
     std::cout<<this->name<<" : "<<this->numberOfEmployees<<std::endl;
 }
 
-void Bank::setName(std::string name){
-    this->name = name;
+void Bank::setNumberOfEmployees(int numberOfEmployees){
+    this->numberOfEmployees = numberOfEmployees;
 }
-std::string Bank::getName(){
-    return this->name;
+int Bank::getNumberOfEmployees(){
+    return this->numberOfEmployees;
 }

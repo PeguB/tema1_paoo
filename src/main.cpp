@@ -2,22 +2,22 @@
 #include "Bank.hpp"
 int main()
 {    
-    Bank bank1 = Bank("bank1_name",34);
-    bank1.printDetails();
-
-    bank1.setName("ban1_name1");
+    Bank bank1 = Bank("BCR",34);
+    Bank bank2 = Bank("BT",100);
 
     bank1.printDetails();
-
-    Bank bankDefault, bank2;
-    Bank bank3 = bank1;
-
-    bank1.setName("bank1_changed");
-    bank1.printDetails();
-    bank2.setName("bank2_name");
-    bankDefault.printDetails();
     bank2.printDetails();
-    bankDefault.printDetails();
+
+    Bank bank3 = bank1;
+    Bank bank4;
+    bank4 = bank3;
+
+    bank3.setNumberOfEmployees(45);
+
+    bank1.printDetails();
+
     bank3.printDetails();
+    bank4.printDetails();
+
     return 0;
 }
