@@ -14,6 +14,9 @@ else()
 endif() 
 
 add_executable(my_program 
-            main.cpp
-            Bank.cpp
-            Bank.hpp)
+            ./src/main.cpp
+            ./src/Bank.cpp
+            ./src/Bank.hpp
+            ./src/Client.hpp
+            ./src/ClientPremium.cpp
+            ./src/ClientPremium.hpp)
