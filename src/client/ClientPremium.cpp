@@ -21,3 +21,10 @@ Clients::ClientPremium::ClientPremium(const ClientPremium& client){
     this->maintanceCost = client.maintanceCost;
     std::cout<<"Copy constructor called for client Premium"<<std::endl;
 }
+
+std::string Clients::ClientPremium(){
+    return this->name;
+}
+void Clients::ClientPremium(std::string name){
+    this->name = name;
+}

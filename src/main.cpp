@@ -23,25 +23,8 @@ int main()
     bank4.printDetails();
     bank5->printDetails();
 
-    Clients::Client* client1 = new Clients::ClientPremium();
-    std::cout<<client1->getCardMaintanceCost()<<std::endl;
-    client1->setCardMaintanceCost(30);
-    std::cout<<client1->getCardMaintanceCost()<<std::endl;
-
-    Clients::ClientPremium client2 = Clients::ClientPremium();
-    client2.setCardMaintanceCost(50);
-    Clients::ClientPremium client3 = Clients::ClientPremium(client2);
-    std::cout<<"Before copy:"<<client3.getCardMaintanceCost()<<std::endl;
-    client2.setCardMaintanceCost(60);
-    std::cout<<"After copy"<<client3.getCardMaintanceCost()<<std::endl;
     
-
-    Clients::ClientPremium* client4 =  new Clients::ClientPremium();
-    client4->setCardMaintanceCost(400);
-    Clients::ClientPremium* client5 = std::move(client4);
-    std::cout<<"Before change:"<<client5->getCardMaintanceCost()<<std::endl;
-    client4->setCardMaintanceCost(100);
-    std::cout<<"After changing client4 "<<client5->getCardMaintanceCost()<<std::endl;
     delete bank5;
+
     return 0;
 }

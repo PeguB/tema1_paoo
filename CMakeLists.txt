@@ -12,11 +12,9 @@ else()
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
     endif()    
 endif() 
+add_subdirectory(./src/bank)
+add_subdirectory(./src/client)
 
 add_executable(my_program 
-            ./src/main.cpp
-            ./src/Bank.cpp
-            ./src/Bank.hpp
-            ./src/Client.hpp
-            ./src/ClientPremium.cpp
-            ./src/ClientPremium.hpp)
+            ./src/main.cpp)
+target_link_libraries(my_program client_library bank_library)

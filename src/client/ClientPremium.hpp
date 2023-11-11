@@ -8,9 +8,13 @@ class ClientPremium : public Client{
     public: 
         int getCardMaintanceCost()override;
         void setCardMaintanceCost(int maintanceCost)override;
+        std::string getName()override;
+        void setName(std::string name)override;
         ClientPremium(ClientPremium&& other);
         ClientPremium();
         ClientPremium(const ClientPremium& client);
+    private:
+        std::string name;
 };
 }
 #endif

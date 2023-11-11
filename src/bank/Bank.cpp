@@ -36,3 +36,8 @@ void Bank::setNumberOfEmployees(int numberOfEmployees){
 int Bank::getNumberOfEmployees(){
     return this->numberOfEmployees;
 }
+
+bool addClient(std::shared_ptr<Client> client){
+    if()
+    this->clients.push_back(client);
+}
