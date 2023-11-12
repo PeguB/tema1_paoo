@@ -1,5 +1,6 @@
 #include "ClientPremium.hpp"
 #include <iostream>
+#include <memory>
 
 Clients::ClientPremium::ClientPremium(){
 
@@ -22,9 +23,9 @@ Clients::ClientPremium::ClientPremium(const ClientPremium& client){
     std::cout<<"Copy constructor called for client Premium"<<std::endl;
 }
 
-std::string Clients::ClientPremium(){
+std::string Clients::ClientPremium::getName(){
     return this->name;
 }
-void Clients::ClientPremium(std::string name){
+void Clients::ClientPremium::setName(std::string name){
     this->name = name;
 }

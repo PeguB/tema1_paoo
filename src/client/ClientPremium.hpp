@@ -1,6 +1,9 @@
-#include "Client.hpp"
 #ifndef CLIENTPREMIUM_H
 #define CLIENTPREMIUM_H
+#include "Client.hpp"
+#include <iostream>
+#include <memory>
+
 namespace Clients{
 class ClientPremium : public Client{
     private:
@@ -13,8 +16,6 @@ class ClientPremium : public Client{
         ClientPremium(ClientPremium&& other);
         ClientPremium();
         ClientPremium(const ClientPremium& client);
-    private:
-        std::string name;
 };
 }
 #endif

@@ -1,9 +1,12 @@
-#include <iostream>
-
 #ifndef BANK_H
 #define BANK_H
+
+#include <iostream>
+#include "Client.hpp"
 #include <vector>
 #include <memory>
+
+namespace Banks{
 class Bank {
     public:
         Bank();
@@ -13,14 +16,14 @@ class Bank {
 
         void setNumberOfEmployees(int numberOfEmployees);
         int getNumberOfEmployees();
-        bool addClient(std::shared_ptr<Client> client);
+        void addClient(std::shared_ptr<Clients::Client> client);
 
         void printDetails();
         ~Bank();
     private:
         std::string name;
         int numberOfEmployees;
-        std::vector<std::shared_ptr<Client>> clients;
+        std::vector<std::shared_ptr<Clients::Client>> clients;
 };
-
+}
 #endif
