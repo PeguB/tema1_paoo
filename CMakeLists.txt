@@ -14,7 +14,15 @@ else()
 endif() 
 add_subdirectory(./src/bank)
 add_subdirectory(./src/client)
+add_subdirectory(./src/account)
 
 add_executable(my_program 
             ./src/main.cpp)
-target_link_libraries(my_program client_library bank_library)
+target_link_libraries(my_program account_library client_library bank_library)
+
+target_include_directories(my_program PUBLIC
+                           "${PROJECT_BINARY_DIR}"
+                           "${PROJECT_SOURCE_DIR}/bank"
+                           "${PROJECT_SOURCE_DIR}/client"
+                           "${PROJECT_SOURCE_DIR}/account"
+                           )

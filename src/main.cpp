@@ -29,6 +29,15 @@ int main()
     bank1->addClient(client1);
     bank1->printDetails();
     
+    client1->addAccount("A123", 1000.0);
+    client1->addAccount("B456", 500.0);
+
+    client1->displayAccountBalances();
+
+    client1->transferBetweenAccounts("A123", "B456", 200.0);
+
+    std::cout << "\nUpdated account balances after transfer:\n";
+    client1->displayAccountBalances();
     // delete bank1;
 
     return 0;

@@ -1,5 +1,5 @@
 
-add_library(bank_library STATIC Bank.cpp Bank.hpp)
+add_library(bank_library STATIC Bank.cpp)
 
 target_include_directories(bank_library PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
